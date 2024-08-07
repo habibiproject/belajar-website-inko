@@ -1,0 +1,152 @@
+.call-action {
+    position: relative;
+    padding: 60px 0;
+    background: url('https://asset-2.tstatic.net/jatim/foto/bank/images/Cocok-Buat-Industri-Kreatif-Astragraphia-Rilis-Mesin-Printer-Berwarna-Terbaru-Ini-3-Keunggulannya.jpg') no-repeat center center; 
+    background-size: cover; /* Pastikan gambar mencakup seluruh elemen */
+    color: #fff; /* Warna teks */
+    text-align: center;
+    margin-top: 80px;
+    min-height: 400px; /* Sesuaikan tinggi minimum sesuai kebutuhan */
+}
+
+
+.call-action .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Warna overlay */
+    z-index: 1;
+}
+
+.call-action .container {
+    position: relative;
+    z-index: 2;
+}
+
+.call-action .content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.call-action h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.call-action p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.call-action .button {
+    margin-top: 20px;
+}
+
+.call-action .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Warna tombol */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.call-action .btn:hover {
+    background-color: #0056b3; /* Warna tombol saat dihover */
+}
+
+body {
+    font-family: "Poppins",Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.about, .team {
+    margin: 50px 0;
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about iframe {
+    flex: 1;
+    max-width: 560px;
+}
+.about-text {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+.about-text h2, .about-text p {
+    margin: 20px 0;
+}
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.member {
+    flex: 1 1 20%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+.member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.member h3 {
+    margin: 10px 0;
+}
+.member p {
+    font-size: 0.9em;
+    color: #666;
+}
+.social-icons {
+    margin-top: 10px;
+}
+.social-icons img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
+
+
+.team-title {
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid blue;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: -780px; /* Atur nilai margin sesuai kebutuhan */
+}
+
+.section {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+#team-inko {
+    margin-top: 100px; /* Sesuaikan jarak bagian ini jika perlu */
+}
+
+

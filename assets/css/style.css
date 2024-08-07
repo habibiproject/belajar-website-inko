@@ -1,0 +1,900 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+
+a {
+  color: #ef6603;
+}
+
+a:hover {
+  color: #fc8129;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 15px;
+  bottom: 15px;
+  z-index: 9999;
+}
+
+.back-to-top i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: #ef6603;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.back-to-top i:hover {
+  background: #fc7c1f;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Disable AOS delay on mobile
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  height: 80px;
+  transition: all 0.5s;
+  z-index: 997;
+  transition: all 0.5s;
+  background-color: #ffffff;
+  box-shadow: 0 0 13px #00000054;
+}
+
+/*#header.header-transparent {
+  background: transparent;
+}*/
+
+#header.header-scrolled {
+  background-color: #ffffff;
+}
+
+#header .logo h1 {
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#header .logo h1 a, #header .logo h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  height: 40px;
+ 
+}
+
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+/* Styling umum untuk nav-menu */
+/* CSS Nav-menu sebelumnya */
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Menata elemen ul dan li */
+.nav-menu > ul {
+  display: flex;
+  align-items: center;
+  padding-left: 0; /* Menghapus padding kiri */
+}
+
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+  margin-right: 10px; /* Tambahkan margin untuk memberi ruang antar elemen */
+}
+
+/* Menggeser menu ke kiri */
+.menu-kiri {
+  display: flex;
+  gap: -2px;
+  margin-left: -350px; /* Tambahkan margin negatif untuk menggeser menu ke kiri */
+  margin-bottom: -10px;
+}
+
+.nav-menu a {
+  display: block;
+  position: relative;
+  color: #000000;
+  padding: 5px 15px 7px 15px;
+  margin-left: 5px;
+  transition: 0.3s;
+  font-size: 15px;
+  border-radius: 50px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+  background: #4569ed;
+  text-decoration: none;
+}
+
+/* Tambahan untuk menu-kiri dan menu-kanan */
+.menu-kiri {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start; /* Posisi elemen ke kiri */
+}
+
+.menu-kanan {
+  margin-left: auto;
+}
+
+.menu-kanan a {
+  display: block;
+  position: relative;
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.menu-kanan a:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 30px;
+  transition: all 0.4s;
+  outline: none !important;
+  line-height: 1;
+  cursor: pointer;
+  text-align: right;
+}
+
+.mobile-nav-toggle i {
+  color: #fff;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  z-index: 9999;
+  overflow-y: auto;
+  background: #fff;
+  transition: ease-in-out 0.2s;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.mobile-nav * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-nav a {
+  display: block;
+  position: relative;
+  color: #2a2c39;
+  padding: 10px 20px;
+  font-weight: 500;
+  outline: none;
+}
+
+.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+  color: #ef6603;
+  text-decoration: none;
+}
+
+.mobile-nav-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 9997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(20, 21, 28, 0.6);
+  overflow: hidden;
+  display: none;
+  transition: ease-in-out 0.2s;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-active .mobile-nav-toggle i {
+  color: #fff;
+}
+
+/* CSS untuk Dropdown */
+.nav-menu .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 160px;
+}
+
+.nav-menu .dropdown-menu li {
+  margin: 0;
+}
+
+.nav-menu .dropdown-menu li a {
+  padding: 10px;
+  color: #007bff;
+  display: block;
+}
+
+.nav-menu .dropdown-menu li a:hover {
+  background-color: #f1f1f1;
+}
+
+.nav-menu .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+.section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-title {
+  padding-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+}
+
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #fd9042;
+  margin: 4px 10px;
+}
+
+
+.section-title p {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #2a2c39;
+  margin-top: 50px; /* Anda bisa menyesuaikan nilai ini */
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        .footer {
+            background-color: #0e59b5;
+            color: #fff;
+            padding: 40px 0 ;
+        }
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer .column {
+            width: 23%;
+        }
+        .footer .column h3 {
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .footer .column p,
+        .footer .column ul,
+        .footer .column ul li,
+        .footer .column a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .footer .column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer .column ul li {
+            margin-bottom: 10px;
+        }
+        .footer .social-media {
+            margin-top: 20px;
+        }
+        .footer .social-media a {
+            margin-right: 15px;
+            font-size: 24px;
+            color: #fff;
+        }
+        .footer .social-media a:hover {
+            color: #ffdf00;
+        }
+        .footer .newsletter input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 70%;
+        }
+        .footer .newsletter button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ffdf00;
+            color: #0056b3;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .footer .newsletter button:hover {
+            background-color: #fff;
+            color: #0056b3;
+        }
+        .footer .bottom {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+  /*------LOGO SAMPING WA&IG-----------/*      
+/* Gaya untuk elemen float lainnya */
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 50px;
+  left: 35px;
+  background-color: #25d366; /* Warna hijau untuk WhatsApp */
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 1px 1px 3px #999;
+  font-size: 120px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Gaya khusus untuk logo Instagram */
+.float.instagram {
+  bottom: 120px; /* Menggeser lebih ke bawah */
+  background-color: #ff4900; /* Warna oranye untuk Instagram */
+  
+}
+
+/* Gaya untuk gambar di dalam float */
+.float img {
+  width: 40px;
+  height: 40px;
+}
+
+/*--------ENDD WA&IG----------*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #f0f0f0;
+  color: rgb(0, 0, 0);
+  padding: 1em 0;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 1em;
+  text-decoration: none;
+}
+
+main {
+  padding: 2em;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+input#searchInput {
+  display: block;
+  margin: 0 auto 2em;
+  padding: 0.5em;
+  width: 80%;
+  max-width: 500px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filter-category {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.filter-category button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  margin: 0 0.5em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-category button:hover {
+  background: #555;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+.product {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1em;
+  width: calc(25% - 2em);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.product h3 {
+  margin: 0.5em 0;
+}
+
+.product p {
+  margin: 0.5em 0;
+}
+
+.product a {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background: #333;
+  color: white;
+}
+
+/*---======END PRODUK=========------*/
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Untuk mencegah scroll */
+}
+
+.preloaderBg {
+  position: fixed;
+  z-index: 9999; /* Pastikan z-index cukup tinggi untuk berada di atas elemen lain */
+  top: 0;
+  left: 0;
+  background: #dbdbdb;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.preloader {
+  background: url('http://127.0.0.1:5500/Website%20INKO/assets/img/logo-inko.webp') no-repeat center;
+  background-size: 100px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.preloader2 {
+  border: 5px solid transparent;
+  border-top: 5px solid #f00;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+}
+
+.dots {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f00;
+  animation: dots 2s infinite linear;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes dots {
+  0% { transform: translate(0, -75px); }
+  25% { transform: translate(52.5px, -52.5px); }
+  50% { transform: translate(75px, 0); }
+  75% { transform: translate(52.5px, 52.5px); }
+  100% { transform: translate(0, 75px); }
+}
+
+/*----------------=======LIVE CHAT==========--------*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-icon svg {
+  fill: white;
+}
+
+.chat-text {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.chat-header {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.chat-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.chat-form {
+  padding: 10px;
+}
+
+.chat-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.chat-form input,
+.chat-form select,
+.chat-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.chat-form button {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.conversation-container {
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+  background-color: #f1f1f1;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.message.received {
+  justify-content: flex-start;
+}
+
+.message.sent {
+  justify-content: flex-end;
+}
+
+.message-content {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message.received .message-content {
+  background-color: #e1ffc7;
+}
+
+.message.sent .message-content {
+  background-color: #dcf8c6;
+}
+
+#chatNotification {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 15px;
+  padding: 10px;
+  margin-bottom: -28px;
+  background-color: #6455eb;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/*---------======END======-------*/
+
+
+
+.icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000; /* Ensure the icons are above other content */
+}
+
+.icon {
+  background: #6455eb;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -170px;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+  position: relative;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.icon img {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.icon span {
+  display: none;
+}
+
+.icon:hover {
+  background: #ffffff;
+}
+
+.icon:hover span {
+  display: inline;
+  position: absolute;
+  bottom: -30px;
+  background: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  z-index: 1001; /* Ensure the tooltip is above other content */
+}
+
+
+.call-action {
+  position: relative;
+  padding: 60px 0;
+  background: url('https://asset-2.tstatic.net/jatim/foto/bank/images/Cocok-Buat-Industri-Kreatif-Astragraphia-Rilis-Mesin-Printer-Berwarna-Terbaru-Ini-3-Keunggulannya.jpg') no-repeat center center; 
+  background-size: cover; /* Pastikan gambar mencakup seluruh elemen */
+  text-align: center;
+  margin-top: 60px;
+  min-height: 400px; /* Sesuaikan tinggi minimum sesuai kebutuhan */
+}
+
+
+.call-action .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Warna overlay */
+  z-index: 1;
+}
+
+.call-action .container {
+  position: relative;
+  z-index: 2;
+}
+
+.call-action .content {
+  position: relative;
+  color: white;
+  z-index: 3;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.call-action h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.call-action p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.call-action .button {
+  margin-top: 20px;
+}
+
+.call-action .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff; /* Warna tombol */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.call-action .btn:hover {
+  background-color: #0056b3; /* Warna tombol saat dihover */
+}
+

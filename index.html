@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Beranda</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo-inko.webp" rel="icon" />
+  
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/index.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+
+  <!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center">
+
+    <div class="logo mr-auto">
+      <a href="index.html"><img src="assets/img/logo-inko.webp" alt="" class="img-inko"></a>
+    </div>
+
+    <nav class="nav-menu d-none d-lg-block">
+      <ul class="menu-kiri">
+          <li class="active"><a href="index.html">Beranda</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="video.html">Video</a></li>
+          <li><a href="artikel.html">Artikel</a></li>
+          <li class="dropdown">
+              <a href="contactus.html" class="dropdown-toggle">Hubungi Kami</a>
+              <ul class="dropdown-menu">
+                  <li><a href="tentangkami.html">Tentang Kami</a></li>
+                  <li><a href="tentangkami.html#team-inko">Team Inko</a></li>
+              </ul>
+          </li>
+      </ul>
+  </nav>
+    <!-- .nav-menu -->
+    <div class="menu-kanan">
+      <a href="login.html">Login</a>
+    </div>
+
+  </div>
+</header>
+<!-- End Header -->
+
+
+
+</head>
+<body>
+<!--------===== PRE LOAD===========------->
+<div class="preloaderBg" id="preloader">
+  <div class="preloader"></div>
+  <div class="preloader2"></div>
+  <div class="dots" style="animation-delay: 0s;"></div>
+  <div class="dots" style="animation-delay: 0.5s;"></div>
+  <div class="dots" style="animation-delay: 1s;"></div>
+  <div class="dots" style="animation-delay: 1.5s;"></div>
+</div>
+  <!---------======= ENDD========------>
+
+  <!------======APK========---------->
+
+        
+        <div class="icons">
+            <div class="icon download-apk" onclick="openDownloadPage()">
+                <img src="assets/img/logo-inko.webp" alt="Download APK">
+                <span>Download APK</span>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!--------========END APK============------>
+
+  <!-----------==========LiveChat========----------->
+
+
+  <div class="chat-button" onclick="toggleChat()">
+    <div class="chat-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M20 2H4C2.9 2 2 2.9 2 4V20L6 16H20C21.1 16 22 15.1 22 14V4C22 2.9 21.1 2 20 2ZM20 14H5.17L4 15.17V4H20V14Z"></path></svg>
+    </div>
+    <div class="chat-text">Chat</div>
+</div>
+
+<div id="chatNotification" class="chat-notification" onclick="toggleChat()"> Ada yang bisa kami bantu?</div>
+
+<div class="chat-popup" id="chatPopup">
+    <div class="chat-header">
+        <span>Chat / Kirim Pesan</span>
+        <button onclick="toggleChat()">×</button>
+    </div>
+    <div id="chatForm">
+        <form class="chat-form">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            <label for="department">Pilih departemen (opsional)</label>
+            <select id="department" name="department">
+                <option value="">-</option>
+                <option value="sales">Sales</option>
+                <option value="support">Support</option>
+            </select>
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="button" onclick="startChat()">Mulai percakapan</button>
+        </form>
+    </div>
+    <div id="chatConversation" style="display: none;">
+        <div class="conversation-container">
+            <div class="message received">
+                <div class="message-content">
+                    Selamat Datang Di INKO! Ada yang bisa kami bantu?
+                </div>
+            </div>
+        </div>
+        <form class="chat-form" onsubmit="sendMessage(event)">
+            <textarea id="chatMessage" name="chatMessage" placeholder="Ketik pesan..."></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+</div>
+
+<!-----======END LiveChat---------========-->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+    <div>
+      <p></p>
+    </div>
+    <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <img src="assets/img/sales.png" id="img1" width="1270px" height="800px" alt="" class="animate__animated animate__zoomIn">
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <img src="images1/Perkuat visual bisnis Anda dengan cetakan berkualitas tinggi (1).png" id="img2" width="1270px" height="800px" alt="" class="animate__animated animate__zoomIn">
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <img src="images1/Perkuat visual bisnis Anda dengan cetakan berkualitas tinggi (2).png" id="img3" width="1270px" height="800px" alt="" class="animate__animated animate__zoomIn">
+        </div>
+      </div>
+
+      
+
+ <!---icon samping whatsapp&instagram---->
+
+      <a href="https://www.instagram.com/infoinko/" class="float instagram" target="_blank">
+        <img width="40px" height="40px" src="assets/img/icon_igg-removebg-preview.png" alt="fa-instagram">
+    </a>
+    <a href="https://api.whatsapp.com/send/?phone=6285691919127&text=Saya+ingin+mengetahui+lebih+lanjut+tentang+INKO&type=phone_number&app_absent=0" class="float btn-floating pulse" target="_blank">
+        <img width="40px" height="40px" class="my-float" src="assets/img/wa remove.png" alt="icons8-whatsapp-24">
+    </a>
+  
+  
+
+<!------tampilan beranda gambar next-------->
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+    <div>
+      <p> </p>
+    </div>
+    <div>
+      <p> </p>
+    </div>
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg>
+
+  </section>
+  <!-- End Hero -->
+  <div class="container-solusi">
+    <div class="section text-section">
+        <h2>Solusi</h2>
+        <h1>Bekerja dengan lebih baik.</h1>
+        <h1 class="blue">Bekerja dengan lebih cerdas.</h1>
+    </div>
+    <div class="section image-section" id="business-solution">
+        <img src="https://inko.id/assets/images/artikels/Img_6632f41cb165b20240502100204.webp" alt="Mengapa Harus Inko?" />
+        <div class="overlay">
+            <h2>Mengapa Harus Inko?</h2>
+            <a href="artikelview2.html" class="learn-more">Pelajari lebih lanjut</a>
+        </div>
+    </div>
+    <div class="section image-section" id="success-stories">
+        <img src="https://inko.id/assets/images/artikels/Img_645c99748371220230511152956.webp" alt="Kisah-kisah Keberhasilan" />
+        <div class="overlay">
+            <h2>Proyeksi Bisnis Digital</h2>
+            <a href="beritaterkait6.html" class="learn-more">Pelajari lebih lanjut</a>
+        </div>
+    </div>
+</div>
+<section class="section inko">
+  <img src="assets/img/apaja.png" alt="Mesin Cetak">
+  <div class="overlay"></div>
+  <div class="content">
+      <h2>Produk</h2>
+      <h1>Efisien, ringkas, dan<br><span>performa yang presisi.</span></h1>
+  </div>
+</section>
+<div class="carousel-container-custom">
+  <div class="carousel-text-custom">
+    <h2>Hanya Mesin Cetak Digital Terbaik</h2>
+    <p>Kami terus berinovasi untuk menghadirkan mesin-mesin cetak digital terbaik untuk kebutuhan percetakan di Indonesia</p>
+  </div>
+
+  <div class="carousel-custom">
+    <div class="carousel-inner-custom">
+      <!-- Repeated carousel items (total 10 items) -->
+      <div class="carousel-item-custom">
+        <div class="carousel-item-content-custom">
+          <img src="https://inko.id/assets/images/produks/20230103114809.webp" alt="Printer">
+          <div class="overlay-custom">
+            <a href="spek7.html" class="view-details-custom">Lihat Detail</a>
+          </div>
+        </div>
+        <p>Finnisher</p>
+      </div>
+
+      <div class="carousel-item-custom">
+        <div class="carousel-item-content-custom">
+          <img src="assets/img/20220304114943.webp" alt="Printer">
+          <div class="overlay-custom">
+            <a href="spek11.html" class="view-details-custom">Lihat Detail</a>
+          </div>
+        </div>
+        <p>Printer</p>
+      </div>
+
+      <div class="carousel-item-custom">
+        <div class="carousel-item-content-custom">
+          <img src="assets/img/20220304115147.webp" alt="Printer">
+          <div class="overlay-custom">
+            <a href="spek.html" class="view-details-custom">Lihat Detail</a>
+          </div>
+        </div>
+        <p>Printer</p>
+      </div>
+
+      <div class="carousel-item-custom">
+        <div class="carousel-item-content-custom">
+          <img src="https://inko.id/assets/images/produks/20221219113002.webp" alt="Printer">
+          <div class="overlay-custom">
+            <a href="spek2.html" class="view-details-custom">Lihat Detail</a>
+          </div>
+        </div>
+        <p>Finnisher</p>
+      </div>
+      <!-- Tambahkan 7 item lainnya dengan struktur yang sama -->
+    </div>
+  </div>
+
+  <!-- Button "Lihat Selengkapnya" -->
+  <div class="more-button-container-custom">
+    <a href="produk.html" class="more-button-custom">Lihat Selengkapnya</a>
+  </div>
+</div>
+
+
+<div class="article-container">
+  <h1>Tetap Up To Date Dengan Artikel Dari Kami</h1>
+  <div class="article-grid">
+      <div class="article-item">
+          <a href="artikel.html">
+              <img src="https://inko.id/assets/images/artikels/Img_66271bec74f8120240423102444.webp " alt="Article 1">
+          </a>
+          <div class="article-content">
+              <div class="article-date-time">23-Apri;-2024 14:29:33</div>
+              <a href="beritaterkait9.html">
+                  <h2>Teka-teki Digital Printing: Mengenal dan mengatasi error dengan cerdas.</h2>
+              </a>
+              <p>Dalam industri percetakan modern, mesin digital printing menjadi tulang punggung produksi. Namun, seperti halnya perangkat teknologi lainnya, mesin digital printing juga rentan mengalami kesalahan atau error. Kita akan menjelajahi berbagai jenis error yang umum terjadi pada mesin digital printing beserta solusinya  ...</p>
+          </div>
+      </div>
+      <div class="article-item">
+          <a href="artikel.html">
+              <img src="https://inko.id/assets/images/artikels/Img_65dd5350cde9e20240227111320.webp" alt="Article 2">
+          </a>
+          <div class="article-content">
+              <div class="article-date-time">27-Feburai-2024 11:18:24</div>
+              <a href="artikelview.html">
+                  <h2>Tetap memilih kualitas: Pentingnya pelayanan unggul dalam industri digital printing.</h2>
+              </a>
+              <p>Industri digital printing telah menjadi salah satu sektor yang berkembang pesat dalam beberapa tahun terakhir. Dalam lingkungan yang semakin kompetitif ini, perusahaan digital printing terus berlomba-lomba untuk menarik pelanggan dengan berbagai penawaran, termasuk harga mesin yang bersaing. Namun, dalam realitasnya, pelanggan tidak hanya mempertimbangkan harga mesin mesin ketika memilih mitra bisnis mereka. kualitas pelayanan juga memainkan peran yang sangat penting, bahkan lebih dari sekadar harga yang kompetitif ...</p>
+          </div>
+      </div>
+      <div class="article-item">
+          <a href="artikel.html">
+              <img src="https://inko.id/assets/images/artikels/Img_649265a4ad00520230621105116.webp" alt="Article 3">
+          </a>
+          <div class="article-content">
+              <div class="article-date-time">15-Juli-2024 16:05 WIB</div>
+              <a href="beritaterkait4.html">
+                  <h2>Melangkah ke Era Digital : Transformasi Dokumen dari Analog ke digital.</h2>
+              </a>
+              <p>Dalam Era Digital Ini, Memvisualisasikan Produk Sebelum Diluncurkan Menjadi Sangat Penting. Mockup Produk Memberikan Gambar Yang Jelas Tentang Bagaimana Produk Tersebut Akan Terlihat Selesai Diproduksi. Mockup Adalah Rancangan Desain Lengkap Dengan Elemen, Tipografi Dan Warna Sebagai Alat Untuk Merepresentasikan Penampilan Karya Desain Jadi. Bagi Desainer Grafis, Kemampuan Membuat Mockup Produk Yang Realistis Sangatlah Penting. Adobe Photoshop CC ...</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<section class="call-to-action">
+  <div class="overlay"></div> <!-- Overlay untuk menimpa warna -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-12">
+        <div class="content-left">
+          <div class="heading">BERGABUNG BERSAMA KAMI SEKARANG</div>
+          <div class="text">Dapatkan pengalaman menjadi bagian dari bisnis digital printing terbesar di Indonesia.</div>
+          <div class="button">
+            <a href="contactus.html" class="btn">Hubungi Kami Sekarang</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <div class="custom-header">
+    <h1 class="custom-header-title">Caring Is Sharing</h1>
+    <p class="custom-header-description">Kami secara aktif berbagi berbagai konten menarik baik berupa informasi,</p>
+    <p class="custom-header-description">
+      edukasi seputar percetakan digital dan kegiatan sehari-hari. 
+    </p>
+  </div>
+  <div class="custom-content-section">
+    <div class="custom-card">
+        <a href="#" class="custom-card-link">
+            <div class="custom-overlay">
+                <button class="custom-view-details-button">View Details</button>
+            </div>
+            <img src="https://inko.id/assets/images/video_thumbnail/Img_65e2848ac29eb20240302094442.webp" alt="Image 1">
+        </a>
+        <div class="custom-card-details">
+        </div>
+    </div>
+    <div class="custom-card">
+        <a href="#" class="custom-card-link">
+            <div class="custom-overlay">
+                <button class="custom-view-details-button">View Details</button>
+            </div>
+            <img src="https://inko.id/assets/images/video_thumbnail/Img_6670f087e9a9320240618092719.webp" alt="Image 2">
+        </a>
+        <div class="custom-card-details">
+        </div>
+    </div>
+    <div class="custom-card">
+        <a href="#" class="custom-card-link">
+            <div class="custom-overlay">
+                <button class="custom-view-details-button">View Details</button>
+            </div>
+            <img src="https://inko.id/assets/images/video_thumbnail/Img_65f2c1c7b7ffe20240314172215.webp" alt="Image 3">
+        </a>
+        <div class="custom-card-details">
+        </div>
+    </div>
+    <div class="custom-card">
+        <a href="#" class="custom-card-link">
+            <div class="custom-overlay">
+                <button class="custom-view-details-button">View Details</button>
+            </div>
+            <img src="https://inko.id/assets/images/video_thumbnail/Img_6554274cd14e420231115090500.webp" alt="Image 4">
+        </a>
+        <div class="custom-card-details">
+        </div>
+    </div>
+  </div>
+
+
+    <div class="support-head">
+      <h4>Dukungan</h4>
+      <h1>Perlu bantuan? <span class="text-gradient" style="display: block;">Bicarakan dengan kami.</span></h1>
+      </div>
+      <div class="inko-row">
+        <div class="inko-col-lg-3">
+            <div class="inko-support-card inko-shadow-home">
+                <div>
+                    <div class="inko-d-flex inko-justify-content-between inko-align-items-start">
+                        <div>
+                            <h6 class="inko-h6">Bantuan Teknis</h6>
+                        </div>
+                        <div><img class="inko-img" src="assets/img/teknis.png" alt="Warranty registration"></div>
+                    </div>
+                    <div class="inko-mt-3 inko-min-h">Dapatkan bantuan teknis untuk masalah instalasi, pemecahan masalah, dan perawatan produk-produk INKO Anda.</div>
+                </div>
+                <p class="inko-mt-3"><a class="inko-btn inko-black" href="">Pelajari lebih lanjut</a></p>
+            </div>
+        </div>
+        <div class="inko-col-lg-3">
+            <div class="inko-support-card inko-shadow-home">
+                <div>
+                    <div class="inko-d-flex inko-justify-content-between inko-align-items-start">
+                        <div>
+                            <h6 class="inko-h6">Pencari lokasi pusat layanan</h6>
+                        </div>
+                        <div><img class="inko-img" src="https://pro.epson.asia/forms/hybris/sprint1-new/img/icon_M_service.png" alt="Service center registration"></div>
+                    </div>
+                    <div class="inko-mt-3 inko-min-h">Temukan pusat layanan yang paling dekat dengan Anda</div>
+                </div>
+                <p class="inko-mt-3"><a class="inko-btn inko-black" href="https://maps.app.goo.gl/YDmRW7U4yRYugLfZ6">Pelajari lebih lanjut</a></p>
+            </div>
+        </div>
+        <div class="inko-col-lg-3">
+            <div class="inko-support-card inko-shadow-home">
+                <div>
+                    <div class="inko-d-flex inko-justify-content-between inko-align-items-start">
+                        <div>
+                            <h6 class="inko-h6">Tutorial Dan Panduan</h6>
+                        </div>
+                        <div><img class="inko-img" src="https://icons.veryicon.com/png/o/business/cloud-shop-sales-management-end-sales-user/using-tutorials.png" alt="Store registration"></div>
+                    </div>
+                    <div class="inko-mt-3 inko-min-h">Temukan panduan dan tutorial untuk memaksimalkan penggunaan produk INKO.</div>
+                </div>
+                <p class="inko-mt-3"><a class="inko-btn inko-black" href="/store-lists">Pelajari lebih lanjut</a></p>
+            </div>
+        </div>
+        <div class="inko-col-lg-3">
+            <div class="inko-support-card inko-shadow-home">
+                <div>
+                    <div class="inko-d-flex inko-justify-content-between inko-align-items-start">
+                        <div>
+                            <h6 class="inko-h6">Contact <br> INKO</h6>
+                        </div>
+                        <div><img class="inko-img" src="https://pro.epson.asia/forms/hybris/sprint1-new/img/icon_M_contact-2.png" alt="Contact Epson"></div>
+                    </div>
+                    <div class="inko-mt-3 inko-min-h">Hubungi bantuan terkait produk, layanan, atau pertanyaan dukungan INKO.</div>
+                </div>
+                <p class="inko-mt-3"><a class="inko-btn inko-black" href="contactus.html">Pelajari lebih lanjut</a></p>
+            </div>
+        </div>
+    </div>
+    
+
+  
+
+
+  <!-- ======= Footer ======= -->
+</head>
+<body>
+    <div class="footer">
+        <div class="container">
+            <div class="column">
+                <h3>About INKO</h3>
+                <p>Suplier Mesin Digital Printing yang telah terbukti <strong>Terbaik</strong> dan <strong>Dipercaya</strong> oleh ratusan pebisnis percetakan digital printing di Indonesia.</p>
+                <div class="social-links">
+                  <a
+                    href="https://api.whatsapp.com/send/?phone=6285691919127&text=Saya+ingin+mengetahui+lebih+lanjut+tentang+INKO&type=phone_number&app_absent=0"
+                    target="_blank"
+                    class="whatsapp"
+                    ><i class="fa fa-whatsapp"></i
+                  ></a>
+                  <a
+                    href="https://www.instagram.com/infoinko/"
+                    target="_blank"
+                    class="instagram"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                  <a href="mailto: info@cpd-inko.com" target="_blank" class="google-plus"
+                    ><i class="fa fa-envelope" aria-hidden="true"></i
+                  ></a>
+                  <a href="https://www.youtube.com/@infoinko2136" target="_blank" class="fa fa-youtube"
+                ></a>
+                </div>
+            </div>
+            <div class="column">
+                <h3>Tautan Bermanfaat</h3>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="produk.html">Produk</a></li>
+                    <li><a href="artikel.html">Artikel</a></li>
+                    <li><a href="contactus.html ">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Kunjungi Kami</h3>
+                <p>Jl. Tampak Siring Blok KJJ 14-15<br>Pusat Bisnis Daan Mogot Baru Kali Deres<br>Jakarta Barat</p>
+                <p>Telp: 021-29028970 / 021-29028971<br>Email: info@cpd-inko.com</p>
+            </div>
+            <div class="column">
+                <h3>Newsletter</h3>
+                <p>Subscribe untuk mendapatkan semua berita dan artikel di inbox email kamu.</p>
+                <form class="newsletter">
+                    <input type="email" placeholder="Email Address">
+                    <button type="submit">Kirim</i></button>
+                </form>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>&copy; Copyright 2019 | All Rights Reserved by <a href="" style="color: #ffd500;">INKO</a></p>
+        </div>
+    </div>
+</body>
+    <!-- End Footer --->
+
+  
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reset Hostinger Password</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/logo-inko.webp">
+    <link href="assets/css/reset.css" rel="stylesheet">
+</head>
+<body>
+<a class="logo" href="index.html" data-qa="homepage-button">
+    <img src="assets/img/logo-inko.webp" alt="Inko">
+</a>
+<div class="container">
+    <div class="content">
+        <div id="login" class="d-flex justify-content-center align-items-center flex-column position-relative">
+            <div class="w-100 mb-20">
+                <div class="text-center mb-25 w-100">
+                    <img src="assets/img/reset pw.png" class="w-100" alt="Reset password">
+                </div>
+                <h3 class="mb-25 text-center title">Reset Your Password</h3>
+                <span class="social-login-block w-100"></span>
+                <form method="post" action="reset_password.php" class="d-flex justify-content-center align-items-center flex-column w-100 text-center">
+                    <input type="hidden" name="_token" value="HRFdAQ2AcHSybaNDVyaTyHfgrWXgPjceIZgus5OU" autocomplete="off">                    
+                    <div class="mb-25 w-100">
+                        <input id="email-input" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" name="email" type="email" autocomplete="email" class="input color-black" placeholder="Email" data-qa="email-input" required>
+
+                        <input style="display: none !important" id="backup-email-input" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" name="backup_email" type="email" autocomplete="email" class="input color-black" placeholder="Backup Email">
+                    </div>
+                    <button type="submit" class="mb-25 w-100 primary-action background-color-hostinger" data-qa="send-reset-email-button">Send Reset Email</button>
+
+                    <button style="display: none !important" id="backup-email-toggle-button" class="mb-25 button secondary-action color-hostinger">Use Backup Email</button>
+                </form>
+                <div class="text-center color-black">
+                    <a href="login.html" class="mb-25 underline fs-12 color-black-50" data-qa="back-to-login-link">Back to log in form</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/reset.js"></script>
+
+</body>
+</html>

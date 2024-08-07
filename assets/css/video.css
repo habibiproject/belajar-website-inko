@@ -1,0 +1,151 @@
+.btn {
+    color: #fff;
+    padding: 13px 25px;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 500;
+    background: #ff7300;
+    position: relative;
+    box-shadow: none;
+    display: inline-block;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    transition: all .4s ease;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    border: none;
+    border-radius: 0;
+    border-radius: 4px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#ffffff;
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.header img {
+    width: 150px;
+}
+.video-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.video-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 31%;
+    padding: 20px;
+}
+.video-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+.video-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.video-card p {
+    font-size: 14px;
+    color: #555;
+}
+.video-card .play-button {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+.pagination a {
+    color: #0056b3;
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+header {
+    background: #f0f0f0;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+  }
+
+  /*-----------------PAGINATION BAGIAN 1 ----------*/
+
+  .pagination {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    padding-left: 580px;
+}
+.pagination li {
+    margin: 0 5px;
+}
+.pagination a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ddd;
+}
+.pagination a:hover {
+    background-color: #ddd;
+}
+.pagination .active a {
+    background-color: #ff7300;
+    color: white;
+    border: 1px solid black;
+}
+
+
+/*--------=========PAGINATION BAGIAN 2============---------*/
+
+.pagination-custom {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    padding-left: 470px;
+}
+.pagination-custom li {
+    margin: 0 5px;
+}
+.pagination-custom a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ddd;
+}
+.pagination-custom a:hover {
+    background-color: #ddd;
+}
+.pagination-custom .active a {
+    background-color: #ff7300;
+    color: white;
+    border: 1px solid black;
+}
+
+/*----------------END=---------/*
+       

@@ -1,0 +1,390 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000; /* Pastikan header memiliki z-index yang lebih tinggi */
+}
+
+header .logo img {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(124, 124, 124);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+main {
+    padding: 0;
+    text-align: center;
+}
+
+.welcome-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('../img/apk.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 1; /* Pastikan overlay berada di bawah header */
+}
+
+.text-content {
+    margin-top: -250px;
+    padding-right: 700px;
+    padding-top: 100px;
+}
+
+.text-content h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.download-buttons a {
+    display: inline-block;
+    margin: 10px;
+}
+
+.download-buttons img {
+    width: 200px;
+}
+
+.image-content img {
+    width: 500px;
+}
+
+footer {
+    background-color: #f4f4f4;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+}
+
+footer .social-media img {
+    width: 30px;
+}
+
+.container-app {
+    text-align: center;
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature {
+    flex: 1 1 250px;
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.feature img {
+    max-width: 50px;
+    margin-bottom: 10px;
+}
+
+.feature h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.feature p {
+    font-size: 1em;
+    color: #666;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0;
+    padding: 40px;
+    position: relative;
+}
+
+.section-1:before,
+.section-2:before,
+.section-3:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.section-1 {
+    position: relative;
+}
+
+.section-1:before {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Letakkan di bagian bawah */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f9c74f;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0); /* Bentuk segitiga di bawah */
+    z-index: -1; /* Pastikan ini berada di bawah konten */
+}
+
+.section-2:before {
+    background-color: #90be6d;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    margin-top: -40px;
+}
+
+
+.section-3:before {
+    background-color: #ffc988;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.section-2 {
+    flex-direction: row-reverse; /* Mengatur gambar di sebelah kiri dan teks di sebelah kanan */
+}
+
+.inko .text {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-inko {
+    flex: 1;
+    padding: 20px;
+    padding-bottom: 180px;
+}
+
+.inko .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inko .image img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.inko h1 {
+    color: #2760fd;
+}
+
+.inko p {
+    color: #333;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+.container {
+    text-align: center;
+}
+
+
+
+.store-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.store-links img {
+    width: 150px;
+}
+
+.copyright {
+    margin-top: 50px;
+    font-size: 14px;
+    padding-left: 500px;
+    color: #888;
+    
+}
+
+.inko-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-color: #bde2ff;
+}
+.inko-content {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+.inko-left, .inko-right {
+    flex: 1;
+    padding: 20px;
+}
+.inko-right {
+    text-align: center;
+}
+.inko-img {
+    width: 150px;
+   
+}
+.inko-qr-container {
+    text-align: center;
+}
+.inko-qr {
+    width: 150px;
+    height: 150px;
+}
+.inko-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.inko-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Untuk mencegah scroll */
+  }
+  
+  .preloaderBg {
+    position: fixed;
+    z-index: 9999; /* Pastikan z-index cukup tinggi untuk berada di atas elemen lain */
+    top: 0;
+    left: 0;
+    background: #dbdbdb;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .preloader {
+    background: url('http://127.0.0.1:5500/Website%20INKO/assets/img/logo-inko.webp') no-repeat center;
+    background-size: 100px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  }
+  
+  .preloader2 {
+    border: 5px solid transparent;
+    border-top: 5px solid #f00;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .dots {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f00;
+    animation: dots 2s infinite linear;
+  }
+  
+  @keyframes dots {
+    0% { transform: translate(0, -75px); }
+    25% { transform: translate(52.5px, -52.5px); }
+    50% { transform: translate(75px, 0); }
+    75% { transform: translate(52.5px, 52.5px); }
+    100% { transform: translate(0, 75px); }
+  }
+  
